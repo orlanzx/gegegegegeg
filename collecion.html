@@ -1,0 +1,123 @@
+<html> 
+     <head>
+         <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+          <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+        <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <script>
+    
+    document.addEventListener("DOMContentLoaded", function(event) {
+           
+           document.getElementById("miboton").addEventListener("click", function(event) {
+              //Validamos que los datos esten ingresados en los inputs
+              if(document.getElementById("nombre").value == ""){
+                alert("Ingrese su nombre");
+              }
+              else if(document.getElementById("apellido").value == ""){
+                alert("Ingrese su apellido");
+              }
+              else if(document.getElementById("email").value == ""){
+                alert("Ingrese su email");
+              }
+              else if(document.getElementById("edad").value == ""){
+                alert("Ingrese su edad");
+              }
+              else{
+                  // Mostrmos el mensaje exitoso, ocultamos el boton enviar, y mostramos el loading
+                  alert("Perfecto, datos ingresados correctamente");
+                  document.getElementByIinlined("procesarGif").style.display = "inline";
+                  document.getElementById("miBtn").style.display = "none";
+              }
+           
+           
+           });
+    });
+  </script>
+     </head>
+     
+    <body>
+         <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+        <div class="container" >
+        <div class="row">
+                <div class="col s12 l12">
+                    <h1 style="text-align: center">
+                    <b>formulario bit</b>
+                    </h1>
+               </div>
+        </div>
+       
+       
+        <div class="row">
+             <div class=" col s6 l6 input-field">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" placeholder="NOMBRE" name="NOMBRE" data-length="10" id="nombre" />
+                <label for="">NOMBRE</label>
+
+            </div>  
+            
+            <div class="col s6 l6 input-field">
+                <i class="material-icons prefix" >android</i>
+                <input type="text" placeholder="APELLIDO" name="APELLIDO" class="validate" data-length="11" id="apellido" />
+                <label data-error="mal" data-success="bien">APELLIDO</label>
+            </div>    
+             
+               
+
+
+        </div>  
+        <div class="row">
+            <div class=" col s6 l6 input-field">
+                <i class="material-icons prefix">flight_land</i>
+                <input type="text" name="Email" data-length="10" id="email"/>
+                <label for="">Email</label>
+
+            </div>  
+            
+            <div class="col s6 l6 input-field">
+                <i class="material-icons prefix">&#xE91B;</i>
+                <input type="number"placeholder="ejemplo 34" class="validate" data-length="10" id="edad"/ >
+            
+                <label for="">Edad</label>
+            </div>    
+        </div> 
+
+
+
+
+
+
+
+           <div class="row">
+                <div class="col s6 l6">
+                <button id="miboton" class="btn waves-effect waves-light">
+                    <b/>enviar
+                </button>
+                <img src="loader.gif" alt="" style="width:10%; height:10%; display:none">
+           
+
+
+        </div>  
+
+    
+                
+        
+        
+
+
+    </body>    
+
+
+
+</html>
